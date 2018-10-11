@@ -2,6 +2,8 @@ language: php
 
 dist: trusty
 
+node_js: "6"
+
 before_install:
  - sudo apt-get update
  - sudo apt-get install chromium-chromedriver
@@ -70,8 +72,8 @@ before_script:
 #
 #  - composer install --prefer-source --no-interaction --no-progress --no-suggest --optimize-autoloader --verbose --profile
 #
-## Install NPM dependencies
-#  - if [[ $NPM_TEST ]]; then nvm install $TRAVIS_NODE_VERSION && npm install -g yarn && yarn install --network-concurrency 1; fi
+# Install NPM dependencies
+  - if [[ $NPM_TEST ]]; then nvm install $TRAVIS_NODE_VERSION && npm install -g yarn && yarn install --network-concurrency 1; fi
 #
 ## Start behat services
 #  - if [[ $BEHAT_TEST ]]; then mkdir artifacts; fi
