@@ -109,4 +109,4 @@ deploy:
   local-dir: storybook-static
   on:
     branch: 1
-    repo: silverstripe/silverstripe-admin
+#    repo: silverstripe/silverstripe-admin
