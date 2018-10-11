@@ -96,7 +96,7 @@ after_failure:
 
 
 before_deploy:
-- git clone git@github.com:silverstripe/silverstripe-asset-admin.git
+- git clone https://github.com/silverstripe/silverstripe-asset-admin.git
 - cd silverstripe-asset-admin
 - yarn install
 - cd ..
