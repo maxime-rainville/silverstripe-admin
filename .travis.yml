@@ -52,7 +52,7 @@ matrix:
 #       - BEHAT_TEST=cms
 
 before_script:
-- echo "Do nothin"
+  - echo "Do nothin"
 ## Init PHP
 #  - export CORE_RELEASE=$TRAVIS_BRANCH
 #  - export PATH=/usr/lib/chromium-browser/:$PATH
