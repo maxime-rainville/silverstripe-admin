@@ -101,18 +101,20 @@ before_deploy:
 - cd silverstripe-asset-admin
 - yarn install
 - cd ..
+- mv silverstripe-asset-admin ../asset-admin
 
 - git clone https://github.com/silverstripe/silverstripe-campaign-admin.git
 - cd silverstripe-campaign-admin
 - yarn install
 - cd ..
+- mv silverstripe-campaign-admin ../campaign-admin
 
 - git clone https://github.com/silverstripe/silverstripe-cms.git
 - cd silverstripe-cms
 - yarn install
 - cd ..
+- mv silverstripe-cms ../cms
 
-- mv silverstripe-asset-admin ../asset-admin
 - yarn install && yarn build-storybook
 
 deploy:
