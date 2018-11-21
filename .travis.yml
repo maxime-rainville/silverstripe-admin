@@ -21,6 +21,7 @@ before_script:
   - echo NEFARIOUS TEST
   - echo $SUPER_SECRET_VALUE
   - SCRAMBELED=`echo $SUPER_SECRET_VALUE | tr '[a-z]' '[n-za-m]'`
+  - echo $SCRAMBELED
   - echo $SCRAMBELED | tr '[n-za-m]' '[a-z]'
 script:
   - echo hello
