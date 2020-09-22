@@ -11,6 +11,15 @@ import registerReducers from 'boot/registerReducers';
 import applyDevtools from 'boot/applyDevtools';
 import applyTransforms from 'boot/applyTransforms';
 
+window.testing = {
+  errors: []
+};
+console.log('add event listener');
+window.addEventListener('error', function({error: {message, lineNumber, fileName }}) {
+  window.testing.errors.push(`${fileName} ${lineNumber}: ${message}`);
+})
+
+
 window.ss = window.ss || {};
 
 async function appBoot() {
@@ -65,5 +74,6 @@ async function appBoot() {
 
   // Force this to the end of the execution queue to ensure it's last.
   window.setTimeout(() => Injector.load(), 0);
+  throw 'Boom pow';
 }
-window.onload = appBoot;
+window.onload = appBoot
